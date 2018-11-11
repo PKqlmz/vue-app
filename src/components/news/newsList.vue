@@ -4,10 +4,10 @@
 					<router-link :to="'/home/newsIfo/' +1">
 						<img class="mui-media-object mui-pull-left" src="http://pic29.nipic.com/20130511/9252150_174018365301_2.jpg">
 						<div class="mui-media-body">
-							<h1>能和心爱的人一起睡觉，是件幸福的事情；</h1>
+							<h1> {{ title }} </h1>
 							<p class='mui-ellipsis'>
-                                <span>发表时间：2018年11月10日</span>
-                                <span>点击次数：5</span>
+                                <span>发表时间：{{ cTime }} </span>
+                                <span>点击次数：{{ dTime }} </span>
                             </p>
 						</div>
 					</router-link>
@@ -16,7 +16,15 @@
 			</ul>
 </template>
 <script>
-
+export default {
+	data(){
+		return {
+			title : '能和心爱的人一起睡觉，是件幸福的事情;',  //没有数据接口所以自己模拟，正常应该在生命周期函数上发请求
+			cTime : '2018年11月10日',
+			dTime : 5
+		}
+	}
+}
 </script>
 <style>
 .mui-table-view li h1{

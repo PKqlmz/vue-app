@@ -16,10 +16,11 @@ import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式
 import './lib/mui/css/icons-extra.css'
 
-import { Header,Swipe,SwipeItem} from 'mint-ui'
+import { Header,Swipe,SwipeItem,Button} from 'mint-ui'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 
 //完整导入
 // import MintUI from 'mint-ui';
