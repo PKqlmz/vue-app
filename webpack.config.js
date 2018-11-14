@@ -17,7 +17,8 @@ module.exports = {
       open : true,
       port : 3000,
       contentBase : 'src',
-      hot : false
+      hot : false,
+      host : '192.168.1.116'
   },
   plugins: [ // 所有webpack  插件的配置节
     new VueLoaderPlugin(),

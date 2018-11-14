@@ -52,20 +52,27 @@ export default {
     },
     methods : {   //没有数据接口自己模拟
         getMore(){
+             var dt = new Date()
+         var y = dt.getFullYear()        
+         var m = (dt.getMonth() + 1).toString().padStart(2,'0')
+         var d = ( dt.getDate()).toString().padStart(2,'0')
+         var hh = (dt.getHours()).toString().padStart(2,'0')
+         var mm = (dt.getMinutes()).toString().padStart(2,'0')
+         var ss = (dt.getSeconds()).toString().padStart(2,'0')
             var  newList = [
      {
         name : '匿名用户',
-        cTime : '2018-11-11 11:11:16',
+        cTime : `${y }-${m}-${d} ${hh- 1}:${mm}:${ss}` ,
         cmt : ' 吼吼吼吼~~~~'
                 },
       {
         name : '匿名用户',
-        cTime : '2018-11-11 11:11:17',
+        cTime :  `${y}-${m - 1}-${d} ${hh}:${mm}:${ss }`,
         cmt : ' 红红火火~~~~'
                 }, 
       {
         name : '匿名用户',
-        cTime : '2018-11-11 11:11:18',
+        cTime :  `${y }-${m}-${d- 1} ${hh}:${mm}:${ss }`,
         cmt : ' 恍恍惚惚~~~~'
                 },  
             ]
